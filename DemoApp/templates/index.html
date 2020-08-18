@@ -1,0 +1,23 @@
+<head>
+        <title>
+            Upload doc
+        </title>
+        <style>
+        h2{color: rgb(31, 224, 137);
+                text-align: center;}
+        form{color: dodgerblue;
+                margin: 0 auto; 
+                width:250px;
+                }
+        </style>
+</head>
+
+
+<body>
+<h2> Upload document for translate:  </h2>
+<form method="POST" class="post-form" enctype="multipart/form-data">
+        {% csrf_token %}  
+        {{ form.as_p}} 
+        <button type="submit" class="save btn btn-default"> submit </button>
+</form>
+</body>  

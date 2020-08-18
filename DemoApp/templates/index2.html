@@ -1,0 +1,23 @@
+<head>
+        <title>
+            Upload doc again
+        </title>
+        <style>
+        h3{color: rgb(31, 224, 137);
+                text-align: center;}
+        form{color: dodgerblue;
+                margin: 0 auto; 
+                width:250px;
+                }
+        </style>
+    </head>
+
+<body>
+<h3> File format not suppoted. Please choose excel or text file:  </h3>
+<form method="POST" class="post-form" enctype="multipart/form-data">  
+        {% csrf_token %}  
+        {{ form.as_p}} 
+        <button type="submit" class="save btn btn-default">Submit</button>
+</form>
+</body>
+
