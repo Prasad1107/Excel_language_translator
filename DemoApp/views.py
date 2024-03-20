@@ -21,8 +21,10 @@ def index(request):
             filetype = file_type_identifier(filename)
             print(filetype)
             path = settings.MEDIA_ROOT
-            doc = (f"{path}"+"\\"+ f"{filename}")
+            doc = (f"{path}"+"/"+ f"{filename}")
+            print(doc)
             writepath = settings.MEDIA_ROOT +"/"+f"translated_{filename}"
+            print(writepath)
             trans1 = language_translator(doc, lang, filetype, filename, writepath)
             translate =  trial(filetype, request)
             return translate

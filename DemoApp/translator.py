@@ -51,6 +51,7 @@ class language_translator:
         file2 = open(f'{self.writepath}', 'w') 
         lines = file1.readlines()
         for line in lines:
+            print(line)
             translated = self.translator.translate(line, dest= self.ln)
             file2.write(translated.text)
             file2.write("\n")
